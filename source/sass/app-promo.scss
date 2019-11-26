@@ -1,11 +1,164 @@
 .app-promo {
+  position: relative;
+
+  padding-top: 110px;
+  padding-bottom: 35px;
+
   font-weight: 300;
-  text-align: center;
+  text-align: center;;
+}
+
+.app-promo__container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+}
+
+.app-promo__title {
+  display: none;
 }
 
 .app-promo__button {
-  font-size: 21px;
+  align-self: center;
+  width: 260px;
+  padding: 14px 29px 15px;
+  margin-bottom: 28px;
+
+  font-size: 16px;
   line-height: 18px;
 
   border: solid 3px #ffffff;
+  border-radius: 30px;
+
+  z-index: 2;
+}
+
+.app-promo__image {
+  order: -1;
+  margin-left: -20px;
+  margin-bottom: 28px;
+}
+
+.app-promo__download-list {
+  display: inline-flex;
+  align-self: center;
+  min-height: 56px;
+  // padding-top: 199px;
+}
+
+.app-promo__download-item {
+  margin-right: 34px;
+}
+
+.app-promo__download-item:last-of-type {
+  margin-right: 0;
+}
+
+.app-promo__link {
+  position: relative;
+
+  display: block;
+  width: 47px;
+}
+
+.app-promo__link--apple::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 47px;
+  height: 56px;
+
+  background-image: url("../img/logo-apple.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.app-promo__link--google::after {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: 0;
+
+  width: 47px;
+  height: 56px;
+
+  background-image: url("../img/logo-android.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.app-promo__link--microsoft::after {
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  left: 0;
+
+  width: 47px;
+  height: 56px;
+
+  background-image: url("../img/logo-microsoft.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.app-promo::before {
+  content: "";
+
+  position: absolute;
+  top: 395px;
+  left: 0;
+
+  width: 100%;
+  height: 277px;
+
+
+  background-color: #1d2631;
+}
+
+.app-promo__text {
+  margin-top: 28px;
+
+  font-size: 14px;
+  font-weight: 300;
+
+  z-index: 2;
+}
+
+@media (min-width: 340px) {
+
+  .app-promo__image {
+    margin-left: 0;
+  }
+
+}
+
+@media (min-width: 380px) {
+
+  .app-promo__image {
+    position: relative;
+    left: calc(50% - 160px);
+  }
+
+}
+
+@media (min-width: 660px) {
+
+  .app-promo__title {
+    display: flex;
+    width: 186px;
+    line-height: 30px;
+  }
+
+  .app-promo::before {
+    display: none;
+  }
+
+  .app-promo__image {
+    position: absolute;
+  }
 }
