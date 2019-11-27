@@ -20,11 +20,12 @@
 
 .app-promo__button {
   align-self: center;
-  width: 260px;
-  padding: 14px 29px 15px;
+  width: 267px;
   margin-bottom: 28px;
+  margin-left: 16px;
+  padding: 14px 29px 15px;
 
-  font-size: 16px;
+  font-size: 18px;
   line-height: 18px;
 
   border: solid 3px #ffffff;
@@ -124,7 +125,7 @@
   margin-top: 28px;
 
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 100 !important;
 
   z-index: 2;
 }
@@ -133,6 +134,14 @@
 
   .app-promo__image {
     margin-left: 0;
+  }
+
+}
+
+@media (min-width: 347px) {
+
+  .app-promo__text {
+    padding-left: 20px;
   }
 
 }
@@ -148,10 +157,24 @@
 
 @media (min-width: 660px) {
 
+  .app-promo {
+    padding-bottom: 110px;
+    padding-right: 361px;
+  }
+
+  .app-promo__container {
+    width: 320px;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
   .app-promo__title {
     display: flex;
+    align-self: center;
     width: 186px;
-    line-height: 30px;
+    margin-bottom: 35px;
+
+    z-index: 2;
   }
 
   .app-promo::before {
@@ -160,5 +183,32 @@
 
   .app-promo__image {
     position: absolute;
+
+    left: 60%;
+    bottom: -5%;
   }
+
+  .app-promo__button {
+    width: 300px;
+    margin-bottom: 45px;
+  }
+
+  .app-promo__text {
+    align-self: center;
+
+    font-size: 18px;
+  }
+
+}
+
+@media (min-width: 960px) {
+
+  .app-promo {
+    padding-right: 676px;
+  }
+
+  .app-promo__title {
+    width: 238px;
+  }
+
 }

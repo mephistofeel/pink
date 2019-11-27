@@ -56,7 +56,8 @@
 }
 
 .page-title {
-  font-size: 50px;
+  font-size: 40px;
+  line-height: 48px;
   font-weight: 300;
   text-align: center;
   color: #ffffff;
@@ -127,6 +128,11 @@
     padding: 45px 0;
 
     box-shadow: none;
+  }
+
+  .page-title {
+    font-size: 50px;
+    line-height: 50px;
   }
 
 }
