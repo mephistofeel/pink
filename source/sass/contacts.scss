@@ -1,6 +1,5 @@
 .contacts {
   padding-top: 50px;
-  padding-bottom: 20px;
 }
 
 .contacts__title {
@@ -11,6 +10,7 @@
 
 .contacts__list {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .contacts__list-wrapper {
@@ -34,7 +34,23 @@
   color: $text__light-red;
 }
 
+.contacts__map {
+  position: relative;
 
+  width: 320px;
+  height: 200px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.contacts__map-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  max-width: 100%;
+}
 
 @media (min-width: $tablet-width) {
 
@@ -61,6 +77,10 @@
 
   .contacts__list-wrapper--come {
     width: 211px;
+  }
+
+  .contacts__map {
+    display: none;
   }
 
 }
