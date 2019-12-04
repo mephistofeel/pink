@@ -5,6 +5,8 @@
   padding-bottom: 320px;
 
   background-color: $bg__light-grey;
+
+  overflow: hidden;
 }
 
 .features__list {
@@ -13,6 +15,10 @@
 
 .features__item {
   margin-bottom: 40px;
+}
+
+.features__item:last-of-type {
+  margin-bottom: 0;
 }
 
 .features__item-title {
@@ -36,7 +42,7 @@
 
 .features__item-image--hello {
   position: absolute;
-  bottom: 0;
+  bottom: -38px;
   left: 0;
   right: 0;
 
@@ -58,6 +64,7 @@
   .features__list {
     position: relative;
 
+    margin-top: 135px;
     padding-left: 309px;
   }
 
@@ -69,11 +76,8 @@
   }
 
   .features__item-image--hello {
-    left: -324px;
-    bottom: -85px;
-
-    width: 268px;
-    height: 544px;
+    left: -350px;
+    bottom: -45px;
   }
 
   .features__effect-block  {
@@ -91,7 +95,7 @@
 
     position: absolute;
     top: 28px;
-    left: -325px;
+    left: -340px;
 
     width: 298px;
     height: 345px;
@@ -107,8 +111,8 @@
     content: "24";
 
     position: absolute;
-    top: 116px;
-    left: -278px;
+    top: 118px;
+    left: -292px;
 
     width: 202px;
     height: 202px;
@@ -219,11 +223,6 @@
     left: -30px;
   }
 
-  .features__item-image--hello {
-    width: 292px;
-    height: 302px;
-  }
-
   .features__effect-block  {
     position: relative;
     top: 0;
@@ -240,19 +239,19 @@
     max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
-    padding-left: 370px;
+    padding-left: 400px;
   }
 
   .features__effect-block::before {
     top: 20px;
-    left: calc(50% - 460px);
+    left: calc(50% - 462px);
 
     transform: scale(1);
   }
 
   .features__effect-block::after {
     top: 89px;
-    left: calc(50% - 438px);
+    left: calc(50% - 440px);
 
     width: 253px;
     height: 253px;

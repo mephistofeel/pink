@@ -11,7 +11,7 @@
 .app-promo__container {
   display: flex;
   flex-direction: column;
-  padding-right: 40px;
+  padding: 0 20px;
 }
 
 .app-promo__title {
@@ -20,9 +20,8 @@
 
 .app-promo__button {
   align-self: center;
-  width: 267px;
+  width: 281px;
   margin-bottom: 28px;
-  margin-left: 16px;
   padding: 14px 29px 15px;
 
   font-size: 18px;
@@ -36,7 +35,7 @@
 
 .app-promo__image {
   order: -1;
-  margin-left: -20px;
+  margin-left: -65px;
   margin-bottom: 28px;
 }
 
@@ -44,7 +43,6 @@
   display: inline-flex;
   align-self: center;
   min-height: 56px;
-  // padding-top: 199px;
 }
 
 .app-promo__download-item {
@@ -138,23 +136,6 @@
 
 }
 
-@media (min-width: 347px) {
-
-  .app-promo__text {
-    padding-left: 20px;
-  }
-
-}
-
-@media (min-width: 380px) {
-
-  .app-promo__image {
-    position: relative;
-    left: calc(50% - 160px);
-  }
-
-}
-
 @media (min-width: 660px) {
 
   .app-promo {
@@ -183,9 +164,8 @@
 
   .app-promo__image {
     position: absolute;
-
-    left: 60%;
-    bottom: -5%;
+    left: calc(50% - 357px);
+    // bottom: -5%;
   }
 
   .app-promo__button {
@@ -204,11 +184,26 @@
 @media (min-width: 960px) {
 
   .app-promo {
+    padding-top: 120px;
     padding-right: 676px;
+    padding-bottom: 125px;
   }
 
+  .app-promo__image  {
+    left: calc(50% - 455px);
+    bottom: -5%;
+  }
   .app-promo__title {
     width: 238px;
+    margin-bottom: 60px;
+  }
+
+  .app-promo__button {
+    margin-bottom: 65px;
+  }
+
+  .app-promo__text {
+    margin-top: 60px;
   }
 
 }
