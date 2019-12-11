@@ -1,3 +1,68 @@
+.users-photos__section-intro {
+  margin-top: 50px;
+  margin-bottom: 55px;
+  padding: 0 20px;
+}
+
+.users-photos__item {
+  margin-bottom: 20px;
+}
+
+.photo-card {
+  position: relative;
+
+  width: 280px;
+  margin: 0 auto;
+  padding-right: 19px;
+  padding-bottom: 25px;
+  padding-left: 18px;
+
+  background-color: #f2f2f2;
+}
+
+.photo-card--lead {
+  margin-bottom: 20px;
+}
+
+.photo-card__origin-link {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 280px;
+  margin-bottom: 25px;
+}
+
+.photo-card__origin-link--full {
+  width: 320px;
+}
+
+.photo-card__origin-link--full::before {
+  content: "Панорама дня";
+
+  position: absolute;
+  top: 0;
+  right: 20px;
+
+  width: 140px;
+  height: 36px;
+  padding: 6px 19px;
+
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #d22856;
+}
+
+.photo-card__image {
+  display: block;
+  width: 100%;
+}
+
 .photo-card__user-info {
   font-size: 14px;
   font-weight: 700;
@@ -9,6 +74,169 @@
   text-transform: uppercase;
 }
 
+.photo-card__user-message {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+}
+
 .photo-card__likes {
+  font-size: 12px;
+  text-transform: uppercase;
   color: $text__light-red;
+}
+
+.photo-card__like-button {
+  width: 13px;
+  height: 12px;
+  margin-right: 15px;
+}
+
+@media (min-width: $tablet-width) {
+
+  .users-photos__section-intro {
+    width: 440px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .users-photos__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .users-photos__item:nth-child(2n){
+    margin-left: 20px;
+  }
+
+  .photo-card  {
+    width: 300px;
+    padding-bottom: 26px;
+  }
+
+  .photo-card--lead {
+    width: auto;
+    max-width: 700px;
+    margin-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    background-color: #fff;
+
+    overflow: hidden;
+  }
+
+  .photo-card__origin-link {
+    width: 300px;
+    margin-bottom: 30px;
+  }
+
+  .photo-card__origin-link--full {
+    width: 700px;
+    margin-bottom: 0;
+
+    overflow: hidden;
+  }
+
+  .photo-card__origin-link--full::before {
+    top: 57px;
+    right: 40px;
+  }
+
+  .photo-card__lead-comment {
+    position: relative;
+
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+
+    background-color: #f2f2f2;
+  }
+
+  .photo-card__user-message {
+    min-height: 48px;
+    margin-bottom: 0;
+  }
+
+  .photo-card__likes {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+  }
+
+  .photo-card__likes--lead {
+    position: absolute;
+    bottom: 76px;
+    right: 29px;
+  }
+
+  .photo-card__like-button {
+    margin-left: auto;
+  }
+
+  .photo-card__like-button--lead {
+    margin-left: 15px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+
+  .users-photos__container {
+    padding: 0;
+  }
+
+  .users-photos__list {
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .users-photos__item {
+    margin-bottom: 54px;
+  }
+
+  .users-photos__section-intro {
+    width: 611px;
+}
+
+  .photo-card--lead {
+    width: auto;
+    max-width: 1200px;
+
+    overflow: hidden;
+  }
+
+  .photo-card__origin-link--full {
+    width: 1200px;
+  }
+
+  .photo-card__origin-link--full::before {
+    top: 54px;
+    right: 130px;
+  }
+
+  .photo-card__lead-comment {
+    width: 940px;
+    padding-top: 30px;
+    padding-right: 50px;
+  }
+
+  .photo-card__likes--lead {
+    bottom: 49px;
+  }
+
+  .photo-card__user-message--lead {
+    min-height: 0;
+  }
+
+  .users-photos__item:nth-child(2n){
+    margin-left: 0;
+  }
+
 }

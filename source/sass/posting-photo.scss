@@ -1,8 +1,301 @@
-.posting-form {
+.posting-photo__section-intro {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.posting-form__wrapper {
   background-color: $bg__light-grey;
 }
 
+.posting-form {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.posting-form__image {
+  display: block;
+  width: 280px;
+  height: 374px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  background-image: url("../img/photo-road-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.posting-form__filters {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.posting-form__filters-buttons {
+  display: inline-flex;
+  margin: 0 auto;
+
+  margin-bottom: 30px;
+}
+
+.posting-form__filter {
+  position: relative;
+
+  display: none;
+
+  margin-bottom: 38px;
+  padding-bottom: 34px;
+}
+
+.posting-form__filter--current {
+  display: block;
+}
+
+.posting-form__filter::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+
+  width: calc(100% + 20px*2);
+  height: 1px;
+
+  background-color: rgba(40, 54, 69, 0.1);
+}
+
+.posting-form__filters-button {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background-color: transparent;
+}
+
+.posting-form__filters-button:first-child {
+  margin-right: 34px;
+}
+
+.posting-form__filters-button:nth-child(2) {
+  margin-right: 40px;
+}
+
+.posting-form__filters-icon,
+.posting-form__filters-icon--contrast path {
+  fill: rgba(#283645, 0.3);
+}
+
+.posting-form__filters-icon--crop {
+  width: 44px;
+  height: 44px;
+}
+
+.posting-form__filters-icon--fill {
+  width: 48px;
+  height: 43px;
+}
+
+.posting-form__filters-icon--contrast {
+  width: 32px;
+  height: 32px;
+}
+
+.posting-form__icon-wrapper {
+  display: none;
+}
+
+.posting-form__filter-scale {
+  display: block;
+  width: 240px;
+  height: 2px;
+  margin: 0 auto;
+
+  background-color: #000;
+
+  appearance: none;
+}
+
 .posting__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 15.5px 0;
+
+  font-size: 18px;
   line-height: 18px;
+  color: #d22856;
+
+  background-color: transparent;
   border: solid 3px #d22856;
+  border-radius: 30px;
+}
+
+.posting__button:first-of-type {
+  margin-bottom: 12px;
+}
+
+.posting__button--cancel {
+  color: rgba(40, 54, 69, 0.1);
+
+  border-color: rgba(40, 54, 69, 0.1);
+}
+
+@media (min-width: $tablet-width) {
+
+  .posting-photo__section-intro {
+    margin-top: 54px;
+    margin-bottom: 72px;
+  }
+
+  .posting-form {
+    display: flex;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  .posting-form__image {
+    width: 300px;
+    height: 400px;
+    margin: 0;
+    margin-left: auto;
+
+    background-image: url("../img/photo-road-tablet@1x.jpg");
+  }
+
+  .posting-form__controls {
+    margin-right: auto;
+  }
+
+  .posting-form__filters {
+    margin-left: 45px;
+    margin-bottom: 65px;
+  }
+
+  .posting-form__filters-buttons {
+    display: none;
+  }
+
+  .posting-form__filter {
+    display: inline-flex;
+    margin-bottom: 18px;
+    padding-top: 9px;
+    padding-bottom: 24px;
+  }
+
+  .posting-form__filter:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .posting-form__filter::after {
+    left: 0;
+    width: 275px;
+}
+
+  .posting-form__icon-wrapper {
+    display: block;
+    width: 24px;
+    margin-right: 28px;
+
+    text-align: center;
+  }
+
+  .posting-form__filters-icon,
+  .posting-form__filters-icon--contrast path {
+    fill: #d22856;
+  }
+
+  .posting-form__filters-icon--crop {
+    width: 22px;
+    height: 22px;
+  }
+
+  .posting-form__filters-icon--fill {
+    width: 24px;
+    height: 22px;
+  }
+
+  .posting-form__filters-icon--contrast {
+    width: 16px;
+    height: 16px;
+  }
+
+  .posting-form__filter-scale {
+    align-self: center;
+    width: 202px;
+    margin: 0;
+  }
+
+  .posting-form__buttons {
+    margin-left: 47px;
+  }
+
+  .posting__button {
+    width: 260px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+
+  .posting-photo__section-intro {
+    margin-top: 14px;
+    margin-bottom: 69px;
+  }
+
+  .posting-form__image {
+    background-image: url("../img/photo-road-desktop@1x.jpg");
+  }
+
+  .posting-form__filters {
+    margin-left: 90px;
+  }
+
+  .posting-form__filter {
+    margin-bottom: 15px;
+    padding-top: 0;
+    padding-bottom: 13px;
+  }
+
+  .posting-form__icon-wrapper {
+    width: 48px;
+    margin-right: 44px;
+  }
+
+  .posting-form__filters-icon--crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  .posting-form__filters-icon--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  .posting-form__filters-icon--contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  .posting-form__filter-scale {
+    width: 288px;
+  }
+
+  .posting-form__filter::after {
+    width: 410px;
+  }
+
+  .posting-form__buttons {
+    display: flex;
+    margin-left: 90px;
+    margin-top: 142px;
+  }
+
+  .posting__button  {
+    width: 183px;
+  }
+
+  .posting__button:first-of-type {
+    margin-bottom: 0;
+    margin-right: 44px;
+  }
+
 }
