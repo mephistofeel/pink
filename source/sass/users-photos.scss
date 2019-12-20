@@ -13,9 +13,7 @@
 
   width: 280px;
   margin: 0 auto;
-  padding-right: 19px;
   padding-bottom: 25px;
-  padding-left: 18px;
 
   background-color: #f2f2f2;
 }
@@ -63,6 +61,11 @@
   width: 100%;
 }
 
+.photo-card__text {
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
 .photo-card__user-info {
   font-size: 14px;
   font-weight: 700;
@@ -81,6 +84,9 @@
 }
 
 .photo-card__likes {
+  display: flex;
+  align-items: center;
+
   font-size: 12px;
   text-transform: uppercase;
   color: $text__light-red;
@@ -90,6 +96,10 @@
   width: 13px;
   height: 12px;
   margin-right: 15px;
+
+  background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -145,6 +155,11 @@
     right: 40px;
   }
 
+  .photo-card__text {
+    padding-left: 25px;
+    padding-right: 35px;
+  }
+
   .photo-card__lead-comment {
     position: relative;
 
@@ -166,6 +181,7 @@
   .photo-card__likes {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     margin-top: 20px;
   }
 
@@ -176,11 +192,12 @@
   }
 
   .photo-card__like-button {
+    margin-right: 0;
     margin-left: auto;
   }
 
   .photo-card__like-button--lead {
-    margin-left: 15px;
+    margin-left: 17px;
   }
 
 }
@@ -219,6 +236,10 @@
   .photo-card__origin-link--full::before {
     top: 54px;
     right: 130px;
+  }
+
+  .photo-card__text {
+    padding-right: 30px;
   }
 
   .photo-card__lead-comment {
