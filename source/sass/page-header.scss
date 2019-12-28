@@ -8,6 +8,7 @@
 }
 
 .main-nav {
+  position: relative;
   z-index: 2;
 }
 
@@ -26,22 +27,144 @@
 }
 
 .page-header__logo {
-  padding: 20px 0 20px 20px;
+  width: 74px;
+  margin: 20px 0 20px 20px;
+
+  &[href]:hover .page-header__logo-image path {
+    fill: #d22856;
+  }
+
+  &[href]:active .page-header__logo-image path  {
+    fill: #ffffffff;
+    opacity: 0.3;
+  }
+}
+
+.page-header__logo-image--tablet {
+  display: none;
+}
+
+.page-header__logo-image--desktop {
+  display: none;
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 20px;
   right: 20px;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.main-nav--closed .main-nav__toggle {
+  top: 20px;
+
+  width: 50px;
+  height: 24px;
+}
+
+.main-nav__toggle:hover .main-nav__toggle-stick,
+.main-nav__toggle:hover .main-nav__toggle-stick::before,
+.main-nav__toggle:hover .main-nav__toggle-stick::after {
+  background-color: #d22856;
+}
+
+.main-nav__toggle:active .main-nav__toggle-stick,
+.main-nav__toggle:active .main-nav__toggle-stick::before,
+.main-nav__toggle:active .main-nav__toggle-stick::after {
+  background-color: rgba(#d22856, 0.3);
+}
+
+.main-nav--closed .main-nav__toggle-stick {
+  display: block;
+  width: 50px;
+  height: 4px;
+
+  background-color: #fff;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 4px;
+
+    background-color: #fff;
+  }
+
+  &::after{
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 50px;
+    height: 4px;
+
+    background-color: #fff;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 21px;
+
+  width: 32px;
+  height: 32px;
+}
+
+.main-nav--opened .main-nav__toggle-stick {
+  display: block;
+  width: 32px;
+  height: 5px;
+
+  background-color: #fff;
+  border-radius: 2px;
+
+  transform: rotate(-45deg);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 32px;
+    height: 5px;
+
+    background-color: #fff;
+    border-radius: 2px;
+
+    transform: rotate(90deg);
+  }
+
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }
 
 .site-list {
-  display: none;
-
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   background-color: #283645;
+}
+
+.main-nav--closed .site-list {
+  display: none;
+}
+
+.main-nav--nojs .site-list {
+  display: block;
 }
 
 .site-list__item {
@@ -52,7 +175,20 @@
   display: block;
   padding: 18px 0;
 
-  box-shadow: 0px 1px 0 0 #000000, inset 0px 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255,255,255,.15);
+  border-bottom: 1px solid #000;
+}
+
+.site-list__link[href] {
+
+  &:hover {
+    color: #d22856;
+  }
+
+  &:active {
+    color: rgba(#d22856, 0.3);
+  }
+
 }
 
 .page-title {
@@ -89,8 +225,25 @@
 @media (min-width: 660px) {
 
   .page-header__logo {
-    padding-top: 25px;
-    padding-bottom: 40px;
+    width: 150px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+
+  .page-header__logo-image--mobile {
+    display: none;
+  }
+
+  .page-header__logo-image--tablet {
+    display: block;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    top: 44px;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    top: 45px;
   }
 
   .page-title {
@@ -125,9 +278,17 @@
   }
 
   .page-header__logo {
-    padding: 0;
-    align-self: center;
-    margin-right: 170px;
+    margin: 0;
+    margin-top: 27px;
+    margin-right: 169px;
+  }
+
+  .page-header__logo-image--tablet {
+    display: none;
+  }
+
+  .page-header__logo-image--desktop {
+    display: block;
   }
 
   .main-nav__toggle {
@@ -145,6 +306,14 @@
     background-color: transparent;
   }
 
+  .main-nav--closed .site-list {
+    display: flex;
+  }
+
+  .main-nav--nojs .site-list {
+    display: flex;
+  }
+
   .site-list__item {
     margin-right: 80px;
   }
@@ -154,9 +323,25 @@
   }
 
   .site-list__link {
+    position: relative;
     padding: 45px 0;
 
     box-shadow: none;
+  }
+
+  .site-list__link--current {
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 35px;
+      left: 0;
+      right: 0;
+
+      height: 2px;
+
+      background-color: #fff;
+    }
   }
 
   .page-title {

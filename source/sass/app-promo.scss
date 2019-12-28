@@ -31,6 +31,17 @@
   border-radius: 30px;
 
   z-index: 2;
+
+  &:hover {
+    color: #d22856;
+
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+
 }
 
 .app-promo__image {
@@ -120,7 +131,9 @@
 }
 
 .app-promo__text {
+  align-self: center;
   margin-top: 28px;
+  width: 230px;
 
   font-size: 14px;
   font-weight: 100 !important;
@@ -141,6 +154,8 @@
   .app-promo {
     padding-bottom: 110px;
     padding-right: 361px;
+
+    overflow: hidden;
   }
 
   .app-promo__container {
@@ -164,8 +179,8 @@
 
   .app-promo__image {
     position: absolute;
-    left: calc(50% - 357px);
-    // bottom: -5%;
+    left: calc(50% - 344px);
+    bottom: -28px;
   }
 
   .app-promo__button {
@@ -174,7 +189,7 @@
   }
 
   .app-promo__text {
-    align-self: center;
+    width: 295px;
 
     font-size: 18px;
   }
@@ -191,8 +206,8 @@
 
   .app-promo__image  {
     left: calc(50% - 455px);
-    bottom: -5%;
   }
+
   .app-promo__title {
     width: 238px;
     margin-bottom: 60px;
@@ -203,7 +218,7 @@
   }
 
   .app-promo__text {
-    margin-top: 60px;
+    margin-top: 50px;
   }
 
 }

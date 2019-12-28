@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="main-nav main-nav--shadow">
+    <nav class="main-nav main-nav--closed main-nav--nojs main-nav--shadow">
       <div class="container main-nav__container">
         <a class="logo page-header__logo" href="index.html">
           <svg class="page-header__logo-image page-header__logo-image--mobile" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
@@ -253,9 +253,9 @@
         <h2 class="visually-hidden">Загрузите свою фотографию!</h2>
         <form action="https://echo.htmlacademy.ru" class="posting-form" name="posting-form" method="POST">
           <label for="posting-form__image" class="posting-form__image"></label>
-          <input type="file" class="visually-hidden" id="posting-form__image">
+          <input type="file" class="visually-hidden--input" id="posting-form__image">
           <div class="posting-form__controls">
-            <div class="posting-form__filters">
+            <div class="posting-form__filters" id="photo-filters">
               <div class="posting-form__filters-buttons">
                 <button class="posting-form__filters-button posting-form__filters-button--current" type="button" aria-label="Обрезка">
                   <svg class="posting-form__filters-icon posting-form__filters-icon--crop" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="44px" height="44px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
@@ -272,7 +272,7 @@
                 </button>
                 <button class="posting-form__filters-button" type="button" aria-label="Контрастность">
                   <svg class="posting-form__filters-icon posting-form__filters-icon--contrast" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
-                    <path fill="none" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+                    <path fill="#283645" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
                     <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
                   </svg>
                 </button>
@@ -384,5 +384,6 @@
         </p>
       </div>
     </footer>
-</body>
+    <script src="js/main-menu.js"></script>
+  </body>
 </html>

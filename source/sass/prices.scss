@@ -1,8 +1,12 @@
 .prices {
-  padding-top: 127px;
+  padding-top: 90px;
   padding-bottom: 45px;
 
   background-color: $bg__light-grey;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
 }
 
 .prices__slider {
@@ -36,6 +40,30 @@
 
   background-color: $bg__dark-blue;
   border-right: solid 2px #e5e5e5;
+}
+
+.prices__tarif--hit {
+  position: relative;
+
+  background-image: url("../img/bg-hit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  &::before {
+    content: attr(data-hit-text);
+
+    position: absolute;
+    top: 12px;
+    left: 10px;
+
+    width: 26px;
+    height: 27px;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    transform: rotate(-45deg);
+  }
 }
 
 .prices__tarif:first-child {
@@ -102,6 +130,11 @@
 
 @media (min-width: $tablet-width) {
 
+  .prices {
+    padding-top: 87px;
+    padding-bottom: 67px;
+  }
+
   .prices__slider {
     overflow: auto;
   }
@@ -114,6 +147,15 @@
     padding-top: 15px;
     padding-bottom: 10px;
     font-size: 16px;
+  }
+
+  .prices__tarif--hit {
+    background-image: url("../img/bg-hit-tablet.svg");
+
+    &::before {
+      top: 6px;
+      left: 6px;
+    }
   }
 
   .prices__tarif-cost {
@@ -161,9 +203,18 @@
     align-items: center;
   }
 
+  .prices__toggles {
+    display: none;
+  }
+
 }
 
 @media (min-width: $desktop-width) {
+
+  .prices {
+    padding-top: 150px;
+    padding-bottom: 95px;
+  }
 
   .table-price {
     width: 920px;
@@ -174,6 +225,15 @@
     padding-bottom: 16px;
 
     font-size: 18px;
+  }
+
+  .prices__tarif--hit {
+    background-image: url("../img/bg-hit.svg");
+
+    &::before {
+      top: 12px;
+      left: 10px;
+    }
   }
 
   .prices__tarif-cost {

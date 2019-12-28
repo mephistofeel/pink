@@ -60,6 +60,16 @@ body {
   overflow: hidden;
 }
 
+.visually-hidden--input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -84,8 +94,13 @@ body {
 }
 
 .button {
+  padding: 0;
+
   font-weight: 700;
   text-align: center;
+
+  background-color: transparent;
+  border: none;
 
   cursor: pointer;
 }
@@ -121,6 +136,7 @@ body {
 
   .section-title {
     font-size: 50px;
+    line-height: 60px;
   }
 
 }

@@ -27,7 +27,6 @@
 .posting-form__filters {
   display: flex;
   flex-direction: column;
-
 }
 
 .posting-form__filters-buttons {
@@ -79,9 +78,29 @@
   margin-right: 40px;
 }
 
-.posting-form__filters-icon,
+.posting-form__filters-icon {
+  fill: rgba(#283645, 0.3);
+
+  &:hover {
+    fill: rgba(#283645, 0.5);
+  }
+
+  &:active {
+    fill: #d22856;
+  }
+
+}
+
 .posting-form__filters-icon--contrast path {
   fill: rgba(#283645, 0.3);
+}
+
+.posting-form__filters-button:hover .posting-form__filters-icon--contrast path {
+  fill: rgba(#283645, 0.5);
+}
+
+.posting-form__filters-button:active .posting-form__filters-icon--contrast path {
+  fill: #d22856;
 }
 
 .posting-form__filters-button--current .posting-form__filters-icon,
@@ -146,6 +165,11 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
+input[type=range]::-moz-range-thumb:hover,
+input[type=range]::-ms-thumb:hover {
+  background: #d22856;
+}
+
 /* Special styling for WebKit/Blink */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -156,6 +180,10 @@ input[type=range]::-webkit-slider-thumb {
   background: #f2f2f2;
   cursor: pointer;
   margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background: #d22856;
 }
 
 // Styling the Track
@@ -227,6 +255,17 @@ input[type=range]::-moz-range-track {
   background-color: transparent;
   border: solid 3px #d22856;
   border-radius: 30px;
+
+  &:hover {
+    color: #ffffff;
+
+    background-color: #d22856;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
 }
 
 .posting__button:first-of-type {
@@ -237,6 +276,21 @@ input[type=range]::-moz-range-track {
   color: rgba(40, 54, 69, 0.1);
 
   border-color: rgba(40, 54, 69, 0.1);
+
+  &:hover {
+    color: rgba(40, 54, 69, 0.3);
+
+    background-color: transparent;
+    border-color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: rgba(#283645, 0.3);
+    border-color: rgba(40, 54, 69, 0);
+  }
+
 }
 
 @media (min-width: $tablet-width) {
@@ -301,6 +355,11 @@ input[type=range]::-moz-range-track {
   .posting-form__filters-icon,
   .posting-form__filters-icon--contrast path {
     fill: #d22856;
+
+    &:hover {
+      fill: #d22856;
+    }
+
   }
 
   .posting-form__filters-icon--crop {
